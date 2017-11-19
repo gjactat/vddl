@@ -84,7 +84,7 @@ export default {
               draggable: this.draggable,
             });
           } else {
-            this.wrapper.splice(this.index, 1);
+            this.wrapper.splice(this.wrapper.findIndex((i) => i.id === this.draggable.id), 1);
           }
           break;
         case "copy":
